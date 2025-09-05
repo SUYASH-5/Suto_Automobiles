@@ -4,8 +4,8 @@ import axios from 'axios';
 import './styles/sell.css';
 import Navbar from "../Components/Navbar/Navbar.jsx"
 import Footer from '../Components/Footer/Footer.jsx'
-import newCar from '../Assets/newCar.jpg'
-import usedCar from '../Assets/usedCar.jpg'
+import newCar from '../Assets/newcar.jpg'
+import usedCar from '../Assets/usedcar.jpg'
 import auctionCar from '../Assets/auctioncar.jpg'
 
 export default function Sell() {
