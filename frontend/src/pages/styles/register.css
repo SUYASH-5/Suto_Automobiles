@@ -1,0 +1,123 @@
+:root {
+  --primaryColor: #7a63f1;
+  --secondaryColor: #ebe8fc;
+  --textColor: #a3a3a3;
+  --greyColor: #f4f4f4;
+  --whiteColor: #f5f4fa;
+  --blackColor: #434344;
+}
+
+.register {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--whiteColor);
+  padding: 2rem;
+}
+.register__container {
+  width: 100%;
+  max-width: 400px;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.register__header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.register__header h2 {
+  color: var(--blackColor);
+  font-size: 1.875rem;
+  font-weight: 700;
+}
+.register__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.register__error {
+  background-color: #fee2e2;
+  color: #dc2626;
+  padding: 0.75rem;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 0.875rem;
+}
+.register .form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.register .form__group label {
+  color: var(--blackColor);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.register .form__group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--textColor);
+  border-radius: 4px;
+  background-color: white;
+  color: var(--blackColor);
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+}
+.register .form__group input:focus {
+  outline: none;
+  border-color: var(--primaryColor);
+  box-shadow: 0 0 0 2px var(--secondaryColor);
+}
+.register .form__group input::-moz-placeholder {
+  color: var(--textColor);
+}
+.register .form__group input::placeholder {
+  color: var(--textColor);
+}
+.register__button {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background-color: var(--primaryColor);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.register__button:hover {
+  background-color: #5234ed;
+}
+.register__button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--secondaryColor);
+}
+.register__login-link {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 0.875rem;
+}
+.register__login-link a {
+  color: var(--primaryColor);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.register__login-link a:hover {
+  color: #5234ed;
+}
+
+@media (max-width: 640px) {
+  .register {
+    padding: 1rem;
+  }
+  .register__container {
+    padding: 1.5rem;
+  }
+  .register__header h2 {
+    font-size: 1.5rem;
+  }
+}

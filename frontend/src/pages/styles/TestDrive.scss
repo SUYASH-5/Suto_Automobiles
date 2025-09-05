@@ -1,0 +1,224 @@
+:root {
+    --primaryColor: #7a63f1;
+    --secondaryColor: #ebe8fc;
+    --textColor: #a3a3a3;
+    --greyColor: #f4f4f4;
+    --whiteColor: #f5f4fa;
+    --blackColor: #434344;
+}
+
+.test-drive {
+    min-height: 100vh;
+    padding: 7rem 1rem 2rem;
+    background: var(--whiteColor);
+
+    &__container {
+        max-width: 900px;
+        margin: 0 auto;
+        background: white;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+        h2 {
+            color: var(--blackColor);
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+            text-align: center;
+        }
+
+        .alert {
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+
+            &--error {
+                background: #fee2e2;
+                color: #dc2626;
+            }
+
+            &--success {
+                background: #dcfce7;
+                color: #16a34a;
+            }
+        }
+
+        .content {
+            .car-info {
+                display: flex;
+                gap: 2rem;
+                margin-bottom: 2rem;
+                padding-bottom: 2rem;
+                border-bottom: 1px solid var(--greyColor);
+
+                img {
+                    width: 300px;
+                    height: 200px;
+                    object-fit: cover;
+                    border-radius: 8px;
+                }
+
+                .car-details {
+                    h3 {
+                        color: var(--blackColor);
+                        font-size: 1.4rem;
+                        margin-bottom: 1rem;
+                    }
+
+                    p {
+                        color: var(--textColor);
+                        margin-bottom: 0.5rem;
+
+                        &.price {
+                            color: var(--primaryColor);
+                            font-weight: 600;
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+
+            .test-drive-form {
+                .form-row {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 1rem;
+                    margin-bottom: 1rem;
+                }
+
+                .form-group {
+                    margin-bottom: 1.5rem;
+
+                    label {
+                        display: block;
+                        margin-bottom: 0.5rem;
+                        color: var(--blackColor);
+                        font-weight: 500;
+                    }
+
+                    input,
+                    select,
+                    textarea {
+                        width: 100%;
+                        padding: 0.8rem;
+                        border: 1px solid var(--greyColor);
+                        border-radius: 8px;
+                        font-family: inherit;
+
+                        &:focus {
+                            outline: none;
+                            border-color: var(--primaryColor);
+                        }
+                    }
+
+                    textarea {
+                        min-height: 120px;
+                        resize: vertical;
+                    }
+                }
+
+                .button-group {
+                    display: flex;
+                    gap: 1rem;
+                    justify-content: flex-end;
+                    margin-top: 2rem;
+
+                    .btn {
+                        padding: 0.8rem 1.5rem;
+                        border: none;
+                        border-radius: 8px;
+                        font-weight: 600;
+                        cursor: pointer;
+                        transition: all 0.3s ease;
+
+                        &--primary {
+                            background: var(--primaryColor);
+                            color: white;
+
+                            &:hover {
+                                opacity: 0.9;
+                            }
+                        }
+
+                        &--secondary {
+                            background: var(--greyColor);
+                            color: var(--blackColor);
+
+                            &:hover {
+                                background: darken(#f4f4f4, 5%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.loading-screen {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    .loader {
+        width: 48px;
+        height: 48px;
+        border: 5px solid var(--greyColor);
+        border-top: 5px solid var(--primaryColor);
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+
+    p {
+        color: var(--textColor);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .test-drive {
+        padding-top: 6rem;
+
+        &__container {
+            padding: 1rem;
+
+            .content {
+                .car-info {
+                    flex-direction: column;
+
+                    img {
+                        width: 100%;
+                        max-width: 300px;
+                        margin: 0 auto;
+                    }
+                }
+
+                .test-drive-form {
+                    .form-row {
+                        grid-template-columns: 1fr;
+                    }
+
+                    .button-group {
+                        flex-direction: column;
+
+                        .btn {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

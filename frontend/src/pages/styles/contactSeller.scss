@@ -1,0 +1,415 @@
+:root {
+    --primaryColor: #7a63f1;
+    --secondaryColor: #ebe8fc;
+    --textColor: #a3a3a3;
+    --greyColor: #f4f4f4;
+    --whiteColor: #f5f4fa;
+    --blackColor: #434344;
+}
+
+.contact-seller-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1rem;
+    min-height: calc(100vh - 200px);
+    padding-top: 7.5rem;
+
+    .car-details-wrapper {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+
+        .car-image-section {
+            width: 100%;
+            height: 500px;
+            position: relative;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.3s ease;
+
+                &:hover {
+                    transform: scale(1.02);
+                }
+            }
+        }
+
+        .details-section {
+            padding: 2rem;
+
+            .car-info-section {
+                margin-bottom: 2rem;
+                border-bottom: 1px solid var(--greyColor);
+                padding-bottom: 2rem;
+
+                h2 {
+                    font-size: 2.2rem;
+                    color: var(--blackColor);
+                    margin-bottom: 1.5rem;
+                    font-weight: 600;
+                }
+
+                .car-specs {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                    gap: 1.5rem;
+
+                    .spec-item {
+                        padding: 0.8rem;
+                        background: var(--greyColor);
+                        border-radius: 8px;
+                        transition: transform 0.2s ease;
+
+                        &:hover {
+                            transform: translateY(-2px);
+                            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+                        }
+
+                        .label {
+                            color: var(--textColor);
+                            font-weight: 500;
+                            display: inline-block;
+                            min-width: 100px;
+                        }
+
+                        .value {
+                            color: var(--blackColor);
+                            font-weight: 600;
+                        }
+
+                        &.price {
+                            background: var(--secondaryColor);
+
+
+                            .value {
+                                color: var(--primaryColor);
+                                font-size: 1.2rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .seller-info-section {
+                background: var(--greyColor);
+                padding: 2rem;
+                border-radius: 12px;
+
+                h3 {
+                    color: var(--blackColor);
+                    font-size: 1.5rem;
+                    margin-bottom: 1.5rem;
+                    font-weight: 600;
+                }
+
+                .seller-details {
+                    display: grid;
+                    gap: 1rem;
+                    margin-bottom: 1.5rem;
+
+                    p {
+                        display: flex;
+                        gap: 0.5rem;
+                        align-items: center;
+                        color: var(--textColor);
+
+                        strong {
+                            color: var(--blackColor);
+                            min-width: 80px;
+                        }
+                    }
+                }
+
+                .contact-button {
+                    width: 100%;
+                    padding: 1rem;
+                    background: var(--primaryColor);
+                    color: white;
+                    border: none;
+                    border-radius: 8px;
+                    font-size: 1.1rem;
+                    font-weight: 600;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        opacity: 0.9;
+                        transform: translateY(-2px);
+                        box-shadow: 0 4px 12px rgba(122, 99, 241, 0.2);
+                    }
+
+                    &:active {
+                        transform: translateY(0);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.loading-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    gap: 1rem;
+
+    .loader {
+        width: 48px;
+        height: 48px;
+        border: 5px solid var(--greyColor);
+        border-top: 5px solid var(--primaryColor);
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+
+    p {
+        color: var(--textColor);
+        font-size: 1.1rem;
+    }
+}
+
+.error-message {
+    text-align: center;
+    padding: 2rem;
+
+    p {
+        color: #dc2626;
+        margin-bottom: 1rem;
+    }
+
+    button {
+        padding: 0.5rem 1rem;
+        background: var(--primaryColor);
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-seller-container {
+        margin: 1rem;
+
+        .car-details-wrapper {
+            .car-image-section {
+                height: 300px;
+            }
+
+            .details-section {
+                padding: 1rem;
+
+                .car-info-section {
+                    h2 {
+                        font-size: 1.8rem;
+                    }
+
+                    .car-specs {
+                        grid-template-columns: 1fr;
+                    }
+                }
+
+                .seller-info-section {
+                    padding: 1rem;
+                }
+            }
+        }
+    }
+}
+
+.reviews-section {
+    margin-top: 2rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+    h3 {
+        color: var(--blackColor);
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .reviews-container {
+        display: grid;
+        gap: 1rem;
+        margin-bottom: 2rem;
+
+        .review-card {
+            background: var(--greyColor);
+            padding: 1rem;
+            border-radius: 8px;
+
+            .review-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 0.5rem;
+
+                .reviewer-name {
+                    font-weight: 600;
+                    color: var(--blackColor);
+                }
+            }
+
+            .review-comment {
+                color: var(--textColor);
+                margin: 0.5rem 0;
+            }
+
+            .review-date {
+                font-size: 0.9rem;
+                color: var(--textColor);
+            }
+        }
+    }
+
+    .write-review-btn {
+        background: var(--primaryColor);
+        color: white;
+        padding: 0.8rem 1.5rem;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: opacity 0.3s ease;
+
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+
+    .review-form {
+        margin-top: 1rem;
+        padding: 1rem;
+        background: var(--greyColor);
+        border-radius: 8px;
+
+        .rating-input,
+        .review-input {
+            margin-bottom: 1rem;
+
+            label {
+                display: block;
+                margin-bottom: 0.5rem;
+                color: var(--blackColor);
+                font-weight: 500;
+            }
+
+            textarea {
+                width: 100%;
+                min-height: 100px;
+                padding: 0.8rem;
+                border: 1px solid var(--textColor);
+                border-radius: 4px;
+                resize: vertical;
+            }
+        }
+
+        .submit-review-btn {
+            background: var(--primaryColor);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: opacity 0.3s ease;
+
+            &:hover {
+                opacity: 0.9;
+            }
+        }
+    }
+}
+
+.similar-cars-section {
+    margin-top: 2rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+    h3 {
+        color: var(--blackColor);
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .similar-cars-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+
+        .similar-car-card {
+            background: var(--greyColor);
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            }
+
+            img {
+                width: 100%;
+                height: 180px;
+                object-fit: cover;
+            }
+
+            .car-info {
+                padding: 1rem;
+
+                h4 {
+                    color: var(--blackColor);
+                    font-size: 1.1rem;
+                    margin-bottom: 0.5rem;
+                }
+
+                p {
+                    color: var(--textColor);
+                    margin: 0.2rem 0;
+                    font-size: 0.9rem;
+
+                    &.price {
+                        color: var(--primaryColor);
+                        font-weight: 600;
+                        margin-top: 0.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .similar-cars-section {
+        padding: 1rem;
+
+        .similar-cars-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+}

@@ -1,0 +1,71 @@
+:root {
+  --primaryColor: #7a63f1;
+  --secondaryColor: #ebe8fc;
+  --textColor: #a3a3a3;
+  --greyColor: #f4f4f4;
+  --whiteColor: #f5f4fa;
+  --blackColor: #434344;
+}
+
+.sellUsedCarForm {
+  max-width: 600px;
+  margin: 0 auto;
+  padding-top: 8rem;
+}
+.sellUsedCarForm .form-container {
+  padding: 2rem;
+  background-color: var(--whiteColor);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.sellUsedCarForm h2 {
+  text-align: center;
+  color: var(--blackColor);
+  margin-bottom: 2rem;
+}
+.sellUsedCarForm form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.sellUsedCarForm .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.sellUsedCarForm .form-group label {
+  color: var(--blackColor);
+  font-weight: 500;
+}
+.sellUsedCarForm .form-group input {
+  padding: 0.75rem;
+  border: 1px solid var(--textColor);
+  border-radius: 4px;
+  font-size: 1rem;
+  color: var(--blackColor);
+  transition: border-color 0.3s ease;
+}
+.sellUsedCarForm .form-group input:focus {
+  border-color: var(--primaryColor);
+  outline: none;
+}
+.sellUsedCarForm button {
+  padding: 0.75rem;
+  background-color: var(--primaryColor);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.sellUsedCarForm button:hover {
+  background-color: #5234ed;
+}
+.sellUsedCarForm .confirmation {
+  text-align: center;
+  color: var(--primaryColor);
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}

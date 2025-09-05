@@ -1,0 +1,149 @@
+:root {
+  --primaryColor: #7a63f1;
+  --secondaryColor: #ebe8fc;
+  --textColor: #a3a3a3;
+  --greyColor: #f4f4f4;
+  --whiteColor: #f5f4fa;
+  --blackColor: #434344;
+}
+
+.usedCars {
+  padding: 2rem 1rem;
+  background: var(--whiteColor);
+  min-height: 100vh;
+  padding-top: 8rem;
+}
+.usedCars .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.usedCars .container .title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.usedCars .container .title h2 {
+  color: var(--blackColor);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.usedCars .container .title p {
+  color: var(--textColor);
+  font-size: 1rem;
+}
+.usedCars .container .carsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+  justify-items: center;
+  justify-content: center;
+}
+.usedCars .container .carsContainer .carCard {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  max-width: 350px;
+  width: 100%;
+}
+.usedCars .container .carsContainer .carCard:hover {
+  transform: translateY(-5px);
+}
+.usedCars .container .carsContainer .carCard .carImage {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+.usedCars .container .carsContainer .carCard .carImage img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.usedCars .container .carsContainer .carCard .carImage img:hover {
+  transform: scale(1.05);
+}
+.usedCars .container .carsContainer .carCard .carInfo {
+  padding: 1.5rem;
+}
+.usedCars .container .carsContainer .carCard .carInfo h3 {
+  color: var(--blackColor);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.usedCars .container .carsContainer .carCard .carInfo .details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  color: var(--textColor);
+  font-size: 0.9rem;
+}
+.usedCars .container .carsContainer .carCard .carInfo .details span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.usedCars .container .carsContainer .carCard .carInfo .sellerInfo {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  color: var(--textColor);
+  font-size: 0.9rem;
+}
+.usedCars .container .carsContainer .carCard .carInfo .sellerInfo span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.usedCars .container .carsContainer .carCard .carInfo .price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primaryColor);
+  margin-bottom: 1rem;
+}
+.usedCars .container .carsContainer .carCard .carInfo .viewDetails {
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--primaryColor);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.usedCars .container .carsContainer .carCard .carInfo .viewDetails:hover {
+  background: #5234ed;
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: var(--primaryColor);
+  font-size: 1.2rem;
+}
+
+.error {
+  text-align: center;
+  padding: 2rem;
+  color: red;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .usedCars .container .title h2 {
+    font-size: 1.5rem;
+  }
+  .usedCars .container .carsContainer {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 0.5rem;
+  }
+  .usedCars .container .carsContainer .carCard {
+    max-width: 300px;
+  }
+}

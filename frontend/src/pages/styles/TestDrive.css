@@ -1,0 +1,185 @@
+:root {
+  --primaryColor: #7a63f1;
+  --secondaryColor: #ebe8fc;
+  --textColor: #a3a3a3;
+  --greyColor: #f4f4f4;
+  --whiteColor: #f5f4fa;
+  --blackColor: #434344;
+}
+
+.test-drive {
+  min-height: 100vh;
+  padding: 7rem 1rem 2rem;
+  background: var(--whiteColor);
+}
+.test-drive__container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+.test-drive__container h2 {
+  color: var(--blackColor);
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  text-align: center;
+}
+.test-drive__container .alert {
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+.test-drive__container .alert--error {
+  background: #fee2e2;
+  color: #dc2626;
+}
+.test-drive__container .alert--success {
+  background: #dcfce7;
+  color: #16a34a;
+}
+.test-drive__container .content .car-info {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--greyColor);
+}
+.test-drive__container .content .car-info img {
+  width: 300px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+}
+.test-drive__container .content .car-info .car-details h3 {
+  color: var(--blackColor);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+.test-drive__container .content .car-info .car-details p {
+  color: var(--textColor);
+  margin-bottom: 0.5rem;
+}
+.test-drive__container .content .car-info .car-details p.price {
+  color: var(--primaryColor);
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.test-drive__container .content .test-drive-form .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.test-drive__container .content .test-drive-form .form-group {
+  margin-bottom: 1.5rem;
+}
+.test-drive__container .content .test-drive-form .form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--blackColor);
+  font-weight: 500;
+}
+.test-drive__container .content .test-drive-form .form-group input,
+.test-drive__container .content .test-drive-form .form-group select,
+.test-drive__container .content .test-drive-form .form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid var(--greyColor);
+  border-radius: 8px;
+  font-family: inherit;
+}
+.test-drive__container .content .test-drive-form .form-group input:focus,
+.test-drive__container .content .test-drive-form .form-group select:focus,
+.test-drive__container .content .test-drive-form .form-group textarea:focus {
+  outline: none;
+  border-color: var(--primaryColor);
+}
+.test-drive__container .content .test-drive-form .form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+.test-drive__container .content .test-drive-form .button-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 2rem;
+}
+.test-drive__container .content .test-drive-form .button-group .btn {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.test-drive__container .content .test-drive-form .button-group .btn--primary {
+  background: var(--primaryColor);
+  color: white;
+}
+.test-drive__container .content .test-drive-form .button-group .btn--primary:hover {
+  opacity: 0.9;
+}
+.test-drive__container .content .test-drive-form .button-group .btn--secondary {
+  background: var(--greyColor);
+  color: var(--blackColor);
+}
+.test-drive__container .content .test-drive-form .button-group .btn--secondary:hover {
+  background: #e7e7e7;
+}
+
+.loading-screen {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.loading-screen .loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid var(--greyColor);
+  border-top: 5px solid var(--primaryColor);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+.loading-screen p {
+  color: var(--textColor);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media (max-width: 768px) {
+  .test-drive {
+    padding-top: 6rem;
+  }
+  .test-drive__container {
+    padding: 1rem;
+  }
+  .test-drive__container .content .car-info {
+    flex-direction: column;
+  }
+  .test-drive__container .content .car-info img {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .test-drive__container .content .test-drive-form .form-row {
+    grid-template-columns: 1fr;
+  }
+  .test-drive__container .content .test-drive-form .button-group {
+    flex-direction: column;
+  }
+  .test-drive__container .content .test-drive-form .button-group .btn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,108 @@
+:root {
+    --primaryColor: #7a63f1;
+    --secondaryColor: #ebe8fc;
+    --textColor: #a3a3a3;
+    --greyColor: #f4f4f4;
+    --whiteColor: #f5f4fa;
+    --blackColor: #434344;
+}
+
+
+
+$primary-color: var(--primaryColor);
+$secondary-color: var(--secondaryColor);
+$text-color: var(--blackColor);
+$text-color-light: var(--textColor);
+$border-color: var(--greyColor);
+$background-color: var(--whiteColor);
+$white: #fff;
+$box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+$border-radius: 8px;
+$padding: 2rem;
+$transition-time: 0.2s;
+
+// Mixins
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin full-width {
+    width: 100%;
+}
+
+.login-container {
+    @include flex-center;
+    min-height: 100vh;
+    background-color: $background-color;
+
+    .login-box {
+        background: $white;
+        padding: $padding;
+        border-radius: $border-radius;
+        box-shadow: $box-shadow;
+        @include full-width;
+        max-width: 400px;
+
+        h2 {
+            text-align: center;
+            color: $text-color;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+
+            label {
+                display: block;
+                margin-bottom: 0.5rem;
+                color: $text-color-light;
+            }
+
+            input {
+                @include full-width;
+                padding: 0.75rem;
+                border: 1px solid $border-color;
+                border-radius: 4px;
+                font-size: 1rem;
+
+                &:focus {
+                    outline: none;
+                    border-color: $primary-color;
+                }
+            }
+        }
+
+        .login-button {
+            @include full-width;
+            padding: 0.75rem;
+            background-color: $primary-color;
+            color: $white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color $transition-time;
+
+            &:hover {
+                background-color: $secondary-color;
+                color: $primary-color;
+            }
+        }
+
+        .register-link {
+            text-align: center;
+            margin-top: 1rem;
+
+            a {
+                color: $primary-color;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

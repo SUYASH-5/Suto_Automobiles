@@ -1,0 +1,354 @@
+:root {
+  --primaryColor: #7a63f1;
+  --secondaryColor: #ebe8fc;
+  --textColor: #a3a3a3;
+  --greyColor: #f4f4f4;
+  --whiteColor: #f5f4fa;
+  --blackColor: #434344;
+}
+
+.contact-seller-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1rem;
+  min-height: calc(100vh - 200px);
+  padding-top: 7.5rem;
+}
+.contact-seller-container .car-details-wrapper {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+.contact-seller-container .car-details-wrapper .car-image-section {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+}
+.contact-seller-container .car-details-wrapper .car-image-section img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.contact-seller-container .car-details-wrapper .car-image-section img:hover {
+  transform: scale(1.02);
+}
+.contact-seller-container .car-details-wrapper .details-section {
+  padding: 2rem;
+}
+.contact-seller-container .car-details-wrapper .details-section .car-info-section {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--greyColor);
+  padding-bottom: 2rem;
+}
+.contact-seller-container .car-details-wrapper .details-section .car-info-section h2 {
+  font-size: 2.2rem;
+  color: var(--blackColor);
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+.contact-seller-container .car-details-wrapper .details-section .car-info-section .car-specs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+.contact-seller-container .car-details-wrapper .details-section .car-info-section .car-specs .spec-item {
+  padding: 0.8rem;
+  background: var(--greyColor);
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+.contact-seller-container .car-details-wrapper .details-section .car-info-section .car-specs .spec-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+.contact-seller-container .car-details-wrapper .details-section .car-info-section .car-specs .spec-item .label {
+  color: var(--textColor);
+  font-weight: 500;
+  display: inline-block;
+  min-width: 100px;
+}
+.contact-seller-container .car-details-wrapper .details-section .car-info-section .car-specs .spec-item .value {
+  color: var(--blackColor);
+  font-weight: 600;
+}
+.contact-seller-container .car-details-wrapper .details-section .car-info-section .car-specs .spec-item.price {
+  background: var(--secondaryColor);
+}
+.contact-seller-container .car-details-wrapper .details-section .car-info-section .car-specs .spec-item.price .value {
+  color: var(--primaryColor);
+  font-size: 1.2rem;
+}
+.contact-seller-container .car-details-wrapper .details-section .seller-info-section {
+  background: var(--greyColor);
+  padding: 2rem;
+  border-radius: 12px;
+}
+.contact-seller-container .car-details-wrapper .details-section .seller-info-section h3 {
+  color: var(--blackColor);
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+.contact-seller-container .car-details-wrapper .details-section .seller-info-section .seller-details {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.contact-seller-container .car-details-wrapper .details-section .seller-info-section .seller-details p {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  color: var(--textColor);
+}
+.contact-seller-container .car-details-wrapper .details-section .seller-info-section .seller-details p strong {
+  color: var(--blackColor);
+  min-width: 80px;
+}
+.contact-seller-container .car-details-wrapper .details-section .seller-info-section .contact-button {
+  width: 100%;
+  padding: 1rem;
+  background: var(--primaryColor);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.contact-seller-container .car-details-wrapper .details-section .seller-info-section .contact-button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(122, 99, 241, 0.2);
+}
+.contact-seller-container .car-details-wrapper .details-section .seller-info-section .contact-button:active {
+  transform: translateY(0);
+}
+
+.loading-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  gap: 1rem;
+}
+.loading-screen .loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid var(--greyColor);
+  border-top: 5px solid var(--primaryColor);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+.loading-screen p {
+  color: var(--textColor);
+  font-size: 1.1rem;
+}
+
+.error-message {
+  text-align: center;
+  padding: 2rem;
+}
+.error-message p {
+  color: #dc2626;
+  margin-bottom: 1rem;
+}
+.error-message button {
+  padding: 0.5rem 1rem;
+  background: var(--primaryColor);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.error-message button:hover {
+  opacity: 0.9;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media (max-width: 768px) {
+  .contact-seller-container {
+    margin: 1rem;
+  }
+  .contact-seller-container .car-details-wrapper .car-image-section {
+    height: 300px;
+  }
+  .contact-seller-container .car-details-wrapper .details-section {
+    padding: 1rem;
+  }
+  .contact-seller-container .car-details-wrapper .details-section .car-info-section h2 {
+    font-size: 1.8rem;
+  }
+  .contact-seller-container .car-details-wrapper .details-section .car-info-section .car-specs {
+    grid-template-columns: 1fr;
+  }
+  .contact-seller-container .car-details-wrapper .details-section .seller-info-section {
+    padding: 1rem;
+  }
+}
+.reviews-section {
+  margin-top: 2rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+.reviews-section h3 {
+  color: var(--blackColor);
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.reviews-section .reviews-container {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.reviews-section .reviews-container .review-card {
+  background: var(--greyColor);
+  padding: 1rem;
+  border-radius: 8px;
+}
+.reviews-section .reviews-container .review-card .review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.reviews-section .reviews-container .review-card .review-header .reviewer-name {
+  font-weight: 600;
+  color: var(--blackColor);
+}
+.reviews-section .reviews-container .review-card .review-comment {
+  color: var(--textColor);
+  margin: 0.5rem 0;
+}
+.reviews-section .reviews-container .review-card .review-date {
+  font-size: 0.9rem;
+  color: var(--textColor);
+}
+.reviews-section .write-review-btn {
+  background: var(--primaryColor);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: opacity 0.3s ease;
+}
+.reviews-section .write-review-btn:hover {
+  opacity: 0.9;
+}
+.reviews-section .review-form {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: var(--greyColor);
+  border-radius: 8px;
+}
+.reviews-section .review-form .rating-input,
+.reviews-section .review-form .review-input {
+  margin-bottom: 1rem;
+}
+.reviews-section .review-form .rating-input label,
+.reviews-section .review-form .review-input label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--blackColor);
+  font-weight: 500;
+}
+.reviews-section .review-form .rating-input textarea,
+.reviews-section .review-form .review-input textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 0.8rem;
+  border: 1px solid var(--textColor);
+  border-radius: 4px;
+  resize: vertical;
+}
+.reviews-section .review-form .submit-review-btn {
+  background: var(--primaryColor);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: opacity 0.3s ease;
+}
+.reviews-section .review-form .submit-review-btn:hover {
+  opacity: 0.9;
+}
+
+.similar-cars-section {
+  margin-top: 2rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+.similar-cars-section h3 {
+  color: var(--blackColor);
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.similar-cars-section .similar-cars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+.similar-cars-section .similar-cars-grid .similar-car-card {
+  background: var(--greyColor);
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.similar-cars-section .similar-cars-grid .similar-car-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+.similar-cars-section .similar-cars-grid .similar-car-card img {
+  width: 100%;
+  height: 180px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.similar-cars-section .similar-cars-grid .similar-car-card .car-info {
+  padding: 1rem;
+}
+.similar-cars-section .similar-cars-grid .similar-car-card .car-info h4 {
+  color: var(--blackColor);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+.similar-cars-section .similar-cars-grid .similar-car-card .car-info p {
+  color: var(--textColor);
+  margin: 0.2rem 0;
+  font-size: 0.9rem;
+}
+.similar-cars-section .similar-cars-grid .similar-car-card .car-info p.price {
+  color: var(--primaryColor);
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .similar-cars-section {
+    padding: 1rem;
+  }
+  .similar-cars-section .similar-cars-grid {
+    grid-template-columns: 1fr;
+  }
+}

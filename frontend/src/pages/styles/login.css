@@ -1,0 +1,74 @@
+:root {
+  --primaryColor: #7a63f1;
+  --secondaryColor: #ebe8fc;
+  --textColor: #a3a3a3;
+  --greyColor: #f4f4f4;
+  --whiteColor: #f5f4fa;
+  --blackColor: #434344;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--whiteColor);
+}
+.login-container .login-box {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+.login-container .login-box h2 {
+  text-align: center;
+  color: var(--blackColor);
+  margin-bottom: 1.5rem;
+}
+.login-container .login-box .form-group {
+  margin-bottom: 1rem;
+}
+.login-container .login-box .form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--textColor);
+}
+.login-container .login-box .form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--greyColor);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.login-container .login-box .form-group input:focus {
+  outline: none;
+  border-color: var(--primaryColor);
+}
+.login-container .login-box .login-button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--primaryColor);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.login-container .login-box .login-button:hover {
+  background-color: var(--secondaryColor);
+  color: var(--primaryColor);
+}
+.login-container .login-box .register-link {
+  text-align: center;
+  margin-top: 1rem;
+}
+.login-container .login-box .register-link a {
+  color: var(--primaryColor);
+  text-decoration: none;
+}
+.login-container .login-box .register-link a:hover {
+  text-decoration: underline;
+}

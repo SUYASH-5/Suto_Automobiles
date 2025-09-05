@@ -1,0 +1,71 @@
+:root {
+  --primaryColor: #7a63f1;
+  --secondaryColor: #ebe8fc;
+  --textColor: #a3a3a3;
+  --greyColor: #f4f4f4;
+  --whiteColor: #f5f4fa;
+  --blackColor: #434344;
+}
+
+.auctionCarForm {
+  max-width: 600px;
+  margin: 0 auto;
+  padding-top: 8rem;
+}
+.auctionCarForm h2 {
+  text-align: center;
+  color: var(--blackColor);
+  margin-bottom: 2rem;
+}
+.auctionCarForm .form-container {
+  padding: 2rem;
+  background-color: var(--whiteColor);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.auctionCarForm form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.auctionCarForm .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.auctionCarForm .form-group label {
+  color: var(--blackColor);
+  font-weight: 500;
+}
+.auctionCarForm .form-group input {
+  padding: 0.75rem;
+  border: 1px solid var(--textColor);
+  border-radius: 4px;
+  font-size: 1rem;
+  color: var(--blackColor);
+  transition: border-color 0.3s ease;
+}
+.auctionCarForm .form-group input:focus {
+  border-color: var(--primaryColor);
+  outline: none;
+}
+.auctionCarForm button {
+  padding: 0.75rem;
+  background-color: var(--primaryColor);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.auctionCarForm button:hover {
+  background-color: #5234ed;
+}
+.auctionCarForm .confirmation {
+  text-align: center;
+  color: var(--primaryColor);
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
